@@ -3,6 +3,7 @@ require "test_helper"
 class EmployeesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @employee = employees(:one)
+    @name = "Employee #{rand(1000)}"
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create employee" do
     assert_difference("Employee.count") do
-      post employees_url, params: { employee: { biography: @employee.biography, name: @employee.name, profile_pic_url: @employee.profile_pic_url } }
+      post employees_url, params: { employee: { biography: @employee.biography, name: @name, profile_pic_url: @employee.profile_pic_url } }
     end
 
     assert_redirected_to employee_url(Employee.last)
@@ -34,7 +35,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update employee" do
-    patch employee_url(@employee), params: { employee: { biography: @employee.biography, name: @employee.name, profile_pic_url: @employee.profile_pic_url } }
+    patch employee_url(@employee), params: { employee: { biography: @employee.biography, name: @name, profile_pic_url: @employee.profile_pic_url } }
     assert_redirected_to employee_url(@employee)
   end
 

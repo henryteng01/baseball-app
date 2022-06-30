@@ -3,9 +3,15 @@
 one:
   name: MyString
   biography: MyText
-  profile_pic_url: MyString
+  profile_pic_url: schubert.jpg
 
 two:
   name: MyString
   biography: MyText
-  profile_pic_url: MyString
+  profile_pic_url: huh.jpg
+
+will:
+  name: Will
+  biography: 
+    Will is the unknown son of Anakin Skywalker. No one remembers him.
+  profile_pic_url: hank.jpg

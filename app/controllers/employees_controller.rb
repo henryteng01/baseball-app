@@ -28,6 +28,7 @@ class EmployeesController < ApplicationController
         format.html { redirect_to employee_url(@employee), notice: "Employee was successfully created." }
         format.json { render :show, status: :created, location: @employee }
       else
+        puts @employee.errors.full_messages
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @employee.errors, status: :unprocessable_entity }
       end
