@@ -11,12 +11,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Profile pic url:</strong>
-    <%
-=begin%>
-  add image_tag method here
-<%
-=end%>
-    <%= employee.profile_pic_url %>
+    <%= image_tag(employee.profile_pic_url, class: 'w-40') %>
   </p>
 
   <% if action_name != "show" %>
