@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+# Add the additional job and contact fields.
+
 Employee.delete_all
 Employee.create!(name: 'Dave Chmura',
   biography:

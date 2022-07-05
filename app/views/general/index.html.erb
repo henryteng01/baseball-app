@@ -1,4 +1,5 @@
 <div class="w-full">
+<%# rails way of giving flash messages for users %>
 <% if notice.present? %>
   <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
     <%= notice %>
@@ -10,9 +11,10 @@
 </h1>
 <%# How to modify the data structure of the employee to add new fields, what is notice?%>
 <%# how to merge, how to fix the broken stuff at the bottom %>
+<%# if i was to create a separate page, would i need a new controller or no need %>
 
 <ul>
-  <%= @employees.each do |employee| %>
+  <%- @employees.each do |employee| %>
     <li class="flex mb-6">
       <%= image_tag(employee.profile_pic_url,
                     class: "object-contain w-40 h-48 shadow mr-6") %>
