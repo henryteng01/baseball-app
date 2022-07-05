@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BaseballApp</title>
+    <title>WADS Team</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,8 +12,24 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+    <header class="bg-yellow-500">
+      <%= image_tag("Technology_Services_logo.png", alt: "Technology Services Logo") %>
+      <h1><%= @page_title %>
+    </header>
+
+    <section class="flex">
+      <nav class="bg-blue-900 p-6">
+        <ul class="text-gray-300 leading-8">
+          <li><a href="/">Home</a></li>
+          <%# be sure to change the team link when you come back later %>
+          <li><a href="/">Team</a></li>
+          <li><a href="/projects">Past Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <main class="container mx-auto mt-4 px-5 flex">
+        <%= yield %>
+      </main>
+    </section>
   </body>
 </html>

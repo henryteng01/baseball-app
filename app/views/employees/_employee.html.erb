@@ -6,7 +6,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Biography:</strong>
-    <%= employee.biography %>
+    <%= sanitize(employee.biography) %>
   </p>
 
   <p class="my-5">
