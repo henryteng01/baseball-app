@@ -13,19 +13,21 @@
 <%# how to merge, how to fix the broken stuff at the bottom %>
 <%# if i was to create a separate page, would i need a new controller or no need %>
 
-<ul>
-  <%- @employees.each do |employee| %>
-    <li class="flex mb-6">
-      <%= image_tag(employee.profile_pic_url,
-                    class: "object-contain w-40 h-48 shadow mr-6") %>
-      <div>
-        <h2 class="font-bold text-lg mb-3"><%= employee.name %></h2>
 
-        <p>
-          <%= sanitize(employee.biography) %>
-        </p>
-      </div> 
-    </li>
+<div class="row flex-none section-leadership">
+  <%- @employees.each do |employee| %>
+    <div class="column column-md-4 s0 between w-60">
+      <%= image_tag(employee.profile_pic_url, class: "object-contain w-40 h-48 shadow mr-6") %>
+      <div class="component component--heading">
+        <h3 class="heading font-bold w-40"><%= employee.name %></h3>
+      </div>
+      <div class="component component--heading">
+        <h6 class="eyebrows heading w-40"><%= employee.job %></h6>
+      </div>
+      <div class="component component--heading">
+        <p class="w-40"><%= employee.contact %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
 </div>

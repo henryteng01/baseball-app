@@ -16,7 +16,9 @@ Employee.create!(name: 'Dave Chmura',
       the best hamburgers and cheeseburgers in all of Michigan. He additionally was very
       good at baseball.
       </p>},
-  profile_pic_url: 'schubert.jpg')
+  profile_pic_url: 'schubert.jpg',
+  job: "Application Architect Intermediate",
+  contact: "734.029.0303")
 # . . .
 Employee.create!(name: 'Debbie Shih',
   biography:
@@ -25,7 +27,9 @@ Employee.create!(name: 'Debbie Shih',
       Debbie is a student at the University of Michigan, studying for a degree in 
       Computer Science. This was unfortunately cut short after she got turned into a bear.
       </p>},
-  profile_pic_url: 'hank.jpg')
+  profile_pic_url: 'hank.jpg',
+  job: "WADS Intern",
+  contact: "734.902.2010")
 # . . .
 
 Employee.create!(name: 'Henry Teng',
@@ -35,4 +39,6 @@ Employee.create!(name: 'Henry Teng',
       Henry Teng was also studying for Computer Science, but touched a cursed object and was turned into an odd Han dynasty
       era piece of metalwork.
       </p>},
-  profile_pic_url: 'huh.jpg')
+  profile_pic_url: 'huh.jpg',
+  job: "WADS Intern",
+  contact: "734.747.3040")
